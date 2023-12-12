@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/diceDrawer2">
+    <fragment
+        android:id="@+id/diceDrawer2"
+        android:name="com.example.diceroller.DiceDrawer"
+        android:label="fragment_dice_drawer"
+        tools:layout="@layout/fragment_dice_drawer" >
+        <action
+            android:id="@+id/drawer_to_main"
+            app:destination="@id/mainScreen2"
+            app:enterAnim="@anim/slide_down"
+            app:exitAnim="@anim/slide_down_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainScreen2"
+        android:name="com.example.diceroller.MainScreen"
+        android:label="fragment_main_screen"
+        tools:layout="@layout/fragment_main_screen" >
+        <action
+            android:id="@+id/main_to_drawer"
+            app:destination="@id/diceDrawer2"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_up_exit" />
+    </fragment>
+</navigation>
